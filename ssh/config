@@ -1,0 +1,8 @@
+# Custom ssh config
+Include /etc/ssh/ssh_config.d/*
+Host github.com
+  UserKnownHostsFile ~/.dotfiles/ssh/known_hosts
+  SendEnv LANG LC_*
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.dotfiles/ssh/id_ed25519
