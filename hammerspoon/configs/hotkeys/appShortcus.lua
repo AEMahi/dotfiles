@@ -80,9 +80,9 @@ return {
 
   {
     key = 's',
-    desc = 'Toggle Spotify',
+    desc = 'Toggle Safari',
     mods = { 'ctrl', 'alt', 'cmd' },
-    command = function() utl.toggleApp 'Spotify' end,
+    command = function() utl.toggleApp 'Safari' end,
   },
 
   {
