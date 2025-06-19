@@ -1,18 +1,10 @@
-[init]
-	defaultBranch = main
 [user]
-	name = Vivek Jha
-	email = vivek.x.jha@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK9fFcycueFLoRagrZwmLRmWiA3KDOjnsXlz6cHasozv
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-	allowedSignersFile = ~/.config/ssh/allowed_signers
-[commit]
-	gpgsign = true
+	name = AEMahi
+	email = amahimainathan@gmail.com
 [core]
-	sshCommand = ssh -F ~/.config/ssh/config
+	editor = code
+	pager = less
+	sshCommand = ssh -F ~/.dotfiles/ssh/config
 [color]
 	diff = auto
 	status = auto
@@ -25,24 +17,24 @@
 	untracked = red
 	added = green
 	changed = yellow
-	branch = magenta
+	branch = blue
 	nobranch = red
-	remoteBranch = cyan
-	localBranch = magenta
+	remoteBranch = magenta
+	localBranch = cyan
 	unmerged = yellow
 [color "diff"]
 	old = red
 	meta = black
 	new = green
-	frag = yellow
+	frag = magenta
 	context = brightblack
 [color "decorate"]
-	HEAD = brightgreen
-	branch = magenta
-	remoteBranch = cyan
+	HEAD = green
+	branch = blue
+	remoteBranch = magenta
 	tag = brightyellow
 	stash = cyan
 	grafted = red
 	hash = magenta
-[advice]
-	detachedHead = false
+[init]
+	defaultBranch = main
