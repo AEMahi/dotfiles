@@ -39,7 +39,7 @@ done < <(find "$ZDOTDIR/funcs" -type f -maxdepth 1 -print0)
 source "$ZDOTDIR/aliases"
 
 # Color ls, tree, eza
-eval "$(dircolors "$XDG_CONFIG_HOME/eza/.dircolors")"
+eval "$($(command -v dircolors || command -v gdircolors) "$XDG_CONFIG_HOME/eza/.dircolors")"
 
 # Fuzzy finder
 eval "$(fzf --bash)" && source "$XDG_CONFIG_HOME/fzf/config.sh"
@@ -55,7 +55,7 @@ eval "$(atuin init bash)" && {
 eval "$(zoxide init bash --cmd j)" && bind '"\C-p": "ji\n"'
 
 # Keybindings
-bind -x '"\C-o": "exec '"$(brew --prefix)"'/bin/bash"'
+bind -x '"\C-o": exec '"$(which bash)"
 bind -x '"\el": clear'
 bind -x '"\C-n": '"$EDITOR"' -S Session.vim'
 

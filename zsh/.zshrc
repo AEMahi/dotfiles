@@ -10,20 +10,13 @@ HISTSIZE=12000
 SAVEHIST=10000
 
 # Options
-zsh_opts=(
-  extendedhistory
-  histexpiredupsfirst
-  histignoredups
-  histignorespace
-  incappendhistory
-  sharehistory
-  autocd
-  interactivecomments
-)
-setopt "${zsh_opts[@]}"
-
-# PATH + Secrets
-source "$ZDOTDIR/.zprofile"
+setopt extendedhistory
+setopt histexpiredupsfirst
+setopt histignoredups
+setopt histignorespace
+setopt incappendhistory
+setopt sharehistory
+setopt autocd
 
 # Plugin Manager
 source "$XDG_DATA_HOME/zap/zap.zsh"
@@ -64,7 +57,7 @@ for fn in "$ZDOTDIR/funcs"/*(.N:t); do autoload -Uz "$fn"; done
 source "$ZDOTDIR/aliases"
 
 # Color ls, tree, eza
-eval "$(dircolors "$XDG_CONFIG_HOME/eza/.dircolors")"
+eval "$($(command -v dircolors || command -v gdircolors) "$XDG_CONFIG_HOME/eza/.dircolors")"
 
 # Fuzzy finder
 source <(fzf --zsh) && source "$XDG_CONFIG_HOME/fzf/config.sh"
@@ -80,7 +73,7 @@ eval "$(atuin init zsh)" && {
 eval "$(zoxide init zsh --cmd j)" && bindkey -s '^p' 'ji\n'
 
 # Keybindings
-bindkey -s '^o' 'exec "$(brew --prefix)/bin/zsh"\n'
+bindkey -s '^o' 'exec "$(which zsh)"\n'
 bindkey -s '^[l' 'clear\n'
 bindkey -s '^n' '"$EDITOR" -S Session.vim\n'
 
