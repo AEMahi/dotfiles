@@ -10,9 +10,9 @@ return {
 
   {
     key = 'c',
-    desc = 'Toggle ChatGPT',
+    desc = 'Toggle Contacts',
     mods = { 'ctrl', 'alt', 'cmd' },
-    command = function() utl.toggleApp 'ChatGPT' end,
+    command = function() utl.toggleApp 'Contacts' end,
   },
 
   {
@@ -24,16 +24,16 @@ return {
 
   {
     key = 'e',
-    desc = 'Toggle Notion Calendar',
+    desc = 'Toggle Calendar',
     mods = { 'ctrl', 'alt', 'cmd' },
-    command = function() utl.toggleApp 'Notion Calendar' end,
+    command = function() utl.toggleApp 'Calendar' end,
   },
 
   {
     key = 'f',
-    desc = 'Toggle Messenger',
+    desc = 'Toggle Minecraft',
     mods = { 'ctrl', 'alt', 'cmd' },
-    command = function() utl.toggleApp 'Messenger' end,
+    command = function() utl.toggleApp 'Minecraft' end,
   },
 
   {
@@ -41,6 +41,13 @@ return {
     desc = 'Toggle Google Chrome',
     mods = { 'ctrl', 'alt', 'cmd' },
     command = function() utl.toggleApp 'Google Chrome' end,
+  },
+
+  {
+    key = 'i',
+    desc = 'Toggle iMovie',
+    mods = { 'ctrl', 'alt', 'cmd' },
+    command = function() utl.toggleApp 'iMovie' end,
   },
 
   {
@@ -94,9 +101,9 @@ return {
 
   {
     key = 'v',
-    desc = 'Toggle VLC',
+    desc = 'Toggle Visual Studio Code',
     mods = { 'ctrl', 'alt', 'cmd' },
-    command = function() utl.toggleApp 'VLC' end,
+    command = function() utl.toggleApp 'Visual Studio Code' end,
   },
 
   {

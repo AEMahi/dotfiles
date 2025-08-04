@@ -67,7 +67,7 @@ return {
   {
     desc = 'Maximize',
     mods = { 'ctrl', 'alt' },
-    key = 'F',
+    key = 'M',
     command = function() utl.moveApp 'maximize' end,
   },
 
